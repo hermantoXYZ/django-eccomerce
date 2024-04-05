@@ -10,10 +10,14 @@
 ## 2. Migrasi Basis Data:
 
 Buat migrasi dengan menjalankan perintah 
-'''
+```
 python manage.py makemigrations
-''' 
+```
 Terapkan migrasi dengan menjalankan perintah 
-'''
+```
 python manage.py migrate
-'''
+```
+
+
+## 🪪 License <a name="license"></a>
+XYZHermanto. Check `LICENSE`.
