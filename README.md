@@ -4,5 +4,7 @@
 
 ## 1. Definisikan kelas model untuk
 
+[accounts/models.py]
+
 
 
