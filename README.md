@@ -4,7 +4,8 @@
 
 ## 1. Definisikan kelas model:
 
-# tambahkan model Category, Product, Order, OrderItem, Costumer
+## tambahkan model Category, Product, Order, OrderItem, Costumer
+[File Model.py](https://github.com/hermantoXYZ/django-eccomerce/edit/main/accounts/models.py)
 ```
 from django.db import models
 from django.utils import timezone
