@@ -91,6 +91,7 @@ Terapkan migrasi dengan menjalankan perintah
 python manage.py migrate
 ```
 
+
 ### 3. Untuk menampilkan model-model yang Anda buat di Django Admin, Anda dapat melakukan langkah-langkah berikut:
 
 [File Admin.py](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/admin.py)
@@ -107,6 +108,10 @@ admin.site.register(Customer)
 
 admin.site.register(Page)
 ```
+
+untuk memastikan, cek dashboard admin 
+
+![Admin Dashboard](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshoots/2.JPG)
 
 ### 4. Buat sebuah fungsi tampilan baru di views.py untuk menampilkan models.py
 
