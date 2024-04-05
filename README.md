@@ -170,5 +170,31 @@ def page_detail(request, slug):
     return render(request, 'page_detail.html', {'page': page})
 ```
 
+
+## Tambahkan pola URL yang mengarah ke fungsi
+
+```
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='index'),
+    path('products/', views.product_list, name='product_list'),
+    path('products/<int:product_id>/', views.product_detail, name='product_detail'),
+    path('orders/', views.order_list, name='order_list'),
+    path('orders/<int:order_id>/', views.order_detail, name='order_detail'),
+    path('order/create/', views.order_create, name='order_create'),
+    path('page/<slug:slug>/', views.page_detail, name='page_detail'),
+]
+
+```
+
+>>>http://127.0.0.1:8000/
+>>>http://127.0.0.1:8000/products/ (list products)
+>>>http://127.0.0.1:8000/products/1/ (order detail)
+>>>http://127.0.0.1:8000/orders/ (list order)
+>>>http://127.0.0.1:8000/order/create/?product_id=1 (buat pesanan)
+>>>http://127.0.0.1:8000/page/about/ etc
+
 ## License <a name="license"></a>
 XYZHermanto. Check `LICENSE`.
