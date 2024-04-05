@@ -109,7 +109,8 @@ admin.site.register(Customer)
 admin.site.register(Page)
 ```
 
-untuk memastikan, cek dashboard admin 
+untuk memastikan, cek dashboard admin login ke 
+- http://127.0.0.1:8000/admin/ 
 
 ![Admin Dashboard](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshoots/2.JPG)
 
