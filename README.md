@@ -4,7 +4,7 @@
 
 ## 1. Definisikan kelas model untuk
 
-[accounts/models.py](https://github.com/hermantoXYZ/django-eccomerce/accounts/models.py)
+[[accounts/models.py]([https://github.com/hermantoXYZ/django-eccomerce/accounts/models.py](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/models.py))](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/models.py)
 
 
 
