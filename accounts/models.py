@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.utils.text import slugify
 
 
+# Category Product
 class Category(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -12,6 +13,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+# Produk upload
 class Product(models.Model):
     name = models.CharField(max_length=200)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
