@@ -195,7 +195,7 @@ urlpatterns = [
 
 ```
 
-## Buat Formulis untuk memasukan data pesanan
+## 6 Buat Formulir untuk memasukan data pesanan
 > Anda perlu membuat formulir untuk memasukkan data pesanan. Buatlah file forms.py dalam aplikasi Anda dan tambahkan formulir seperti ini:
 
 ```
@@ -216,13 +216,13 @@ class OrderForm(forms.ModelForm):
 
 
 
-
-<ul>http://127.0.0.1:8000/</ul>
-<ul>http://127.0.0.1:8000/products/ (list products)</ul>
-<ul>http://127.0.0.1:8000/products/1/ (order detail)</ul>
-<ul>http://127.0.0.1:8000/orders/ (list order)</ul>
-<ul>http://127.0.0.1:8000/order/create/?product_id=1 (buat pesanan)</ul>
-<ul>http://127.0.0.1:8000/page/about/ etc</ul>
+## Page website Eccomerce
+-<ul>http://127.0.0.1:8000/</ul>
+-<ul>http://127.0.0.1:8000/products/ (list products)</ul>
+-<ul>http://127.0.0.1:8000/products/1/ (order detail)</ul>
+-<ul>http://127.0.0.1:8000/orders/ (list order)</ul>
+-<ul>http://127.0.0.1:8000/order/create/?product_id=1 (buat pesanan)</ul>
+-<ul>http://127.0.0.1:8000/page/about/ etc</ul>
 
 ## License <a name="license"></a>
 XYZHermanto. Check `LICENSE`.
