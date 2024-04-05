@@ -3,10 +3,9 @@
 # Buat Model:
 
 ## 1. Definisikan kelas model:
-
-## tambahkan model Category, Product, Order, OrderItem, Costumer
 [File Model.py](https://github.com/hermantoXYZ/django-eccomerce/edit/main/accounts/models.py)
 ```
+# tambahkan model Category, Product, Order, OrderItem, Costumer
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
@@ -81,7 +80,6 @@ class Page(models.Model):
 #DevelopHermantoXYZ
 
 ```
-
 ## 2. Migrasi Basis Data:
 
 Buat migrasi dengan menjalankan perintah 
@@ -93,6 +91,82 @@ Terapkan migrasi dengan menjalankan perintah
 python manage.py migrate
 ```
 
+### 3. Untuk menampilkan model-model yang Anda buat di Django Admin, Anda dapat melakukan langkah-langkah berikut:
 
-## 🪪 License <a name="license"></a>
+[File Admin.py](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/admin.py)
+```
+from django.contrib import admin
+from .models import Product, Category, Order, OrderItem, Customer, Page
+
+
+admin.site.register(Product)
+admin.site.register(Category)
+admin.site.register(Order)
+admin.site.register(OrderItem)
+admin.site.register(Customer)
+
+admin.site.register(Page)
+```
+
+### 4. Buat sebuah fungsi tampilan baru di views.py untuk menampilkan models.py
+
+```
+from django.shortcuts import render
+#tambahkan product dalam views.py
+from .models import Product, Order, Page
+from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404, redirect
+from .forms import OrderForm
+
+#Product List
+def product_list(request):
+    products = Product.objects.all()
+    return render(request, 'product_list.html', {'products': products})
+
+# Menampilkan Product list di home.html
+def home(request):
+    products = Product.objects.all()
+    return render(request, 'home.html', {'products': products})
+
+# Menampilkan Product Detail
+def product_detail(request, product_id):
+    # Dapatkan objek produk berdasarkan ID atau tampilkan 404 jika tidak ditemukan
+    product = get_object_or_404(Product, pk=product_id)
+    return render(request, 'product_detail.html', {'product': product})
+
+
+def order_list(request):
+    orders = Order.objects.all()
+    return render(request, 'order_list.html', {'orders': orders})
+
+def order_detail(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    return render(request, 'order_detail.html', {'order': order})
+
+# Menampilkan order Create
+def order_create(request):
+    product_id = request.GET.get('product_id')
+    product = get_object_or_404(Product, id=product_id)
+    
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            quantity = form.cleaned_data['quantity']
+            total_price = product.price * quantity  # Hitung total harga
+            order = form.save(commit=False)
+            order.total_price = total_price
+            order.save()  # Simpan objek Order terlebih dahulu
+            order.products.add(product, through_defaults={'quantity': quantity})
+            return redirect('order_detail', order_id=order.id)
+    else:
+        form = OrderForm(initial={'products': [product]})
+    return render(request, 'order_create.html', {'form': form})
+
+# Menampilkan Page Detail
+def page_detail(request, slug):
+    page = get_object_or_404(Page, slug=slug)
+    return render(request, 'page_detail.html', {'page': page})
+```
+
+## License <a name="license"></a>
 XYZHermanto. Check `LICENSE`.
