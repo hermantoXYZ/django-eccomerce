@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+</head>
+<body>
+    <h1>Create Order</h1>
+    <form id="order-form" method="post">
+        {% csrf_token %}
+        <label for="id_customer_name">Customer Name:</label>
+        <input type="text" name="customer_name" id="id_customer_name" required>
+        <br>
+        <label for="id_phone_number">Phone Number:</label>
+        <input type="text" name="phone_number" id="id_phone_number" required>
+        <br>
+        <label for="id_address">Address:</label>
+        <textarea name="address" id="id_address" required></textarea>
+        <br>
+        <label for="id_products">Products:</label>
+        <select name="products" id="id_products" multiple required>
+            {% for product in form.products.field.queryset %}
+                <option value="{{ product.id }}" data-price="{{ product.price }}">{{ product.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="id_quantity">Quantity:</label>
+        <input type="number" name="quantity" id="id_quantity" min="1" value="1" required>
+        <br>
+        <label for="id_total_price">Total Price:</label>
+        <input type="number" name="total_price" id="id_total_price" min="0" step="0.01" required readonly>
+        <br>
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <script>
+        // Ambil elemen-elemen yang diperlukan dari formulir
+        const productsSelect = document.getElementById('id_products');
+        const quantityInput = document.getElementById('id_quantity');
+        const totalPriceInput = document.getElementById('id_total_price');
+
+        // Tambahkan event listener untuk menghitung total harga setiap kali produk dipilih atau jumlah produk diubah
+        productsSelect.addEventListener('change', calculateTotalPrice);
+        quantityInput.addEventListener('input', calculateTotalPrice);
+
+        function calculateTotalPrice() {
+            let total = 0;
+            // Loop melalui opsi yang dipilih dan tambahkan harga produk ke total
+            for (const option of productsSelect.selectedOptions) {
+                total += parseFloat(option.dataset.price);
+            }
+            // Hitung total harga berdasarkan harga produk dan jumlah produk
+            total *= parseInt(quantityInput.value);
+            // Tampilkan total harga di dalam input total_price
+            totalPriceInput.value = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
