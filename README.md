@@ -92,7 +92,7 @@ python manage.py migrate
 ```
 
 
-### 3. Untuk menampilkan model-model yang Anda buat di Django Admin, Anda dapat melakukan langkah-langkah berikut:
+## 3. Untuk menampilkan model-model yang Anda buat di Django Admin, Anda dapat melakukan langkah-langkah berikut:
 
 [File Admin.py](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/admin.py)
 ```
@@ -114,7 +114,7 @@ untuk memastikan, cek dashboard admin login ke
 
 ![Admin Dashboard](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshoots/2.JPG)
 
-### 4. Buat sebuah fungsi tampilan baru di views.py untuk menampilkan models.py
+## 4. Buat sebuah fungsi tampilan baru di views.py untuk menampilkan models.py
 
 [File views.py](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/views.py)
 
@@ -177,7 +177,7 @@ def page_detail(request, slug):
 ```
 
 
-## Tambahkan pola URL yang mengarah ke fungsi
+## 5 Tambahkan pola URL yang mengarah ke fungsi
 
 ```
 from django.urls import path
@@ -194,6 +194,28 @@ urlpatterns = [
 ]
 
 ```
+
+## Buat Formulis untuk memasukan data pesanan
+> Anda perlu membuat formulir untuk memasukkan data pesanan. Buatlah file forms.py dalam aplikasi Anda dan tambahkan formulir seperti ini:
+
+```
+#accounts\forms.py
+from django import forms
+from .models import Order
+
+class OrderForm(forms.ModelForm):
+    # Tambahkan field quantity ke dalam form
+    quantity = forms.IntegerField(min_value=1, initial=1)
+
+    class Meta:
+        model = Order
+        fields = ['customer_name', 'phone_number', 'address', 'products', 'total_price', 'quantity']
+
+```
+[File Forms.py](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/forms.py)
+
+
+
 
 <ul>http://127.0.0.1:8000/</ul>
 <ul>http://127.0.0.1:8000/products/ (list products)</ul>
