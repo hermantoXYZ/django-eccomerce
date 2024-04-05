@@ -110,7 +110,7 @@ admin.site.register(Page)
 
 ### 4. Buat sebuah fungsi tampilan baru di views.py untuk menampilkan models.py
 
-[File views.py] (https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/views.py)
+[File views.py](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/views.py)
 
 ```
 from django.shortcuts import render
