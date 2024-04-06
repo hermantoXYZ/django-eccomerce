@@ -112,7 +112,7 @@ admin.site.register(Page)
 untuk memastikan, cek dashboard admin login ke 
 - http://127.0.0.1:8000/admin/ 
 
-![Admin Dashboard](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshoots/2.JPG)
+![Admin Dashboard](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/2.JPG)
 
 ## 4. Buat sebuah fungsi tampilan baru di views.py untuk menampilkan models.py
 
