@@ -255,5 +255,13 @@ class OrderForm(forms.ModelForm):
 - http://127.0.0.1:8000/order/create/?product_id=1 (buat pesanan)
 - http://127.0.0.1:8000/page/about/ etc
 
+
+![List Galery](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/3.JPG)
+![List Galery](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/4.JPG)
+![List Galery](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/5.JPG)
+![List Galery](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/6.JPG)
+![List Galery](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/7.JPG)
+
+
 ## License <a name="license"></a>
 XYZHermanto. Check `LICENSE`.
