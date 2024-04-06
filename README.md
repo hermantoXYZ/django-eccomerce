@@ -1,5 +1,30 @@
 # Django-eccomerce for Learning HTML/CSS
 
+# Read more..
+
+Untuk membuat model hingga menampilkan halaman template HTML di Django, Anda perlu mengikuti beberapa langkah dasar. Berikut adalah langkah-langkah umumnya:
+
+1. **Membuat Aplikasi Django**: Pastikan Anda telah membuat aplikasi Django menggunakan perintah `django-admin startproject namaproyek`.
+2. **Membuat Aplikasi**: Buat aplikasi di dalam proyek Django Anda dengan menggunakan perintah `python manage.py startapp namaaplikasi`.
+(Langka 1, 2 telah dijelaskan dalam pertemuan sebelumnya)
+3. **Definisikan Model**: Dalam file `models.py` di aplikasi Anda, definisikan model Anda dengan properti dan relasi yang sesuai.
+>Model telah tersedia.. Scroll down.
+4. **Migrasi Database**: Jalankan perintah `python manage.py makemigrations` dan `python manage.py migrate` untuk membuat dan menerapkan migrasi ke basis data.
+5. **Membuat Tampilan (Views)**: Buat tampilan di file `views.py` aplikasi Anda untuk menangani permintaan HTTP dan berinteraksi dengan model.
+>Views telah tersedia.. Scroll down.
+6. **Definisikan URL**: Tentukan URL untuk tampilan Anda di dalam file `urls.py` aplikasi Anda atau proyek Anda. 
+>URL telah tersedia.. Scroll down.
+7. **Buat Template HTML**: Buat file template HTML di dalam direktori `templates` di dalam direktori aplikasi Anda.
+>HTML telah tersedia.. Scroll down.
+
+8. **Jalankan Server Django**: Jalankan server pengembangan Django dengan perintah `python manage.py runserver`.
+
+9. **Akses Halaman**: Buka browser dan akses halaman yang sesuai dengan URL yang telah Anda tentukan, misalnya `http://localhost:8000/artikel/`.
+
+Dengan mengikuti langkah-langkah ini, Anda dapat membuat model, menampilkan data dari model tersebut di halaman template HTML, dan menangani permintaan HTTP menggunakan Django. Pastikan untuk menyesuaikan nama model, tampilan, URL, dan template sesuai dengan kebutuhan aplikasi Anda.
+
+# PROJECT ECCOMERCE
+
 # Buat Model:
 
 ## 1. Definisikan kelas model:
@@ -223,12 +248,12 @@ class OrderForm(forms.ModelForm):
 ![List HTMl](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/1.JPG)
 
 ## Page website Eccomerce
--http://127.0.0.1:8000/
--http://127.0.0.1:8000/products/ (list products)
--http://127.0.0.1:8000/products/1/ (order detail)
--http://127.0.0.1:8000/orders/ (list order)
--http://127.0.0.1:8000/order/create/?product_id=1 (buat pesanan)
--http://127.0.0.1:8000/page/about/ etc
+- http://127.0.0.1:8000/
+- http://127.0.0.1:8000/products/ (list products)
+- http://127.0.0.1:8000/products/1/ (order detail)
+- http://127.0.0.1:8000/orders/ (list order)
+- http://127.0.0.1:8000/order/create/?product_id=1 (buat pesanan)
+- http://127.0.0.1:8000/page/about/ etc
 
 ## License <a name="license"></a>
 XYZHermanto. Check `LICENSE`.
