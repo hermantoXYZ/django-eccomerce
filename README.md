@@ -19,7 +19,7 @@ Untuk membuat model hingga menampilkan halaman template HTML di Django, Anda per
 
 8. **Jalankan Server Django**: Jalankan server pengembangan Django dengan perintah `python manage.py runserver`.
 
-9. **Akses Halaman**: Buka browser dan akses halaman yang sesuai dengan URL yang telah Anda tentukan, misalnya `http://localhost:8000/artikel/`.
+9. **Akses Halaman**: Buka browser dan akses halaman yang sesuai dengan URL yang telah Anda tentukan, misalnya `http://localhost:8000/`.
 
 Dengan mengikuti langkah-langkah ini, Anda dapat membuat model, menampilkan data dari model tersebut di halaman template HTML, dan menangani permintaan HTTP menggunakan Django. Pastikan untuk menyesuaikan nama model, tampilan, URL, dan template sesuai dengan kebutuhan aplikasi Anda.
 
