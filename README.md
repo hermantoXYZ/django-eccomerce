@@ -216,13 +216,19 @@ class OrderForm(forms.ModelForm):
 
 
 
+## 7 Menampilkan daftar halaman di template HTML
+
+[File Template HTML](https://github.com/hermantoXYZ/django-eccomerce/tree/main/templates)
+
+![List HTMl](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/1.JPG)
+
 ## Page website Eccomerce
--<ul>http://127.0.0.1:8000/</ul>
--<ul>http://127.0.0.1:8000/products/ (list products)</ul>
--<ul>http://127.0.0.1:8000/products/1/ (order detail)</ul>
--<ul>http://127.0.0.1:8000/orders/ (list order)</ul>
--<ul>http://127.0.0.1:8000/order/create/?product_id=1 (buat pesanan)</ul>
--<ul>http://127.0.0.1:8000/page/about/ etc</ul>
+-http://127.0.0.1:8000/
+-http://127.0.0.1:8000/products/ (list products)
+-http://127.0.0.1:8000/products/1/ (order detail)
+-http://127.0.0.1:8000/orders/ (list order)
+-http://127.0.0.1:8000/order/create/?product_id=1 (buat pesanan)
+-http://127.0.0.1:8000/page/about/ etc
 
 ## License <a name="license"></a>
 XYZHermanto. Check `LICENSE`.
