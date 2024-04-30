@@ -141,6 +141,8 @@ untuk memastikan, cek dashboard admin login ke
 
 ![Admin Dashboard](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/2.JPG)
 
+![FOTO](https://github.com/hermantoXYZ/django-eccomerce/blob/main/screenshot/2.JPG)
+
 ## 4. Buat sebuah fungsi tampilan baru di views.py untuk menampilkan models.py
 
 [File views.py](https://github.com/hermantoXYZ/django-eccomerce/blob/main/accounts/views.py)
