@@ -1,5 +1,7 @@
 # Django-eccomerce for Learning HTML/CSS
 
+# DISINI PENJELASAN PROJECT
+
 # Read more..
 
 Untuk membuat model hingga menampilkan halaman template HTML di Django, Anda perlu mengikuti beberapa langkah dasar. Berikut adalah langkah-langkah umumnya:
